@@ -1,0 +1,52 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Steel Breakout: Frontline Action"
+config/version="0.1.0"
+config/description="钢铁突围：前线行动 - 双关卡像素横版射击试玩版"
+config/icon="res://assets/generated/pickup_grenade_clean_alpha.png"
+run/main_scene="res://scenes/main/Main.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+
+[autoload]
+
+GameManager="*res://scripts/GameManager.gd"
+LevelManager="*res://scripts/LevelManager.gd"
+MissionManager="*res://scripts/MissionManager.gd"
+SaveManager="*res://scripts/SaveManager.gd"
+AudioManager="*res://scripts/AudioManager.gd"
+EffectSpawner="*res://scripts/EffectSpawner.gd"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom_font="res://assets/fonts/NotoSansSC.ttf"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

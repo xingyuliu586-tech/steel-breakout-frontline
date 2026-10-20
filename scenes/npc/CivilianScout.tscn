@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/npc/NPCBase.gd" id="1"]
+
+[node name="CivilianScout" type="Area2D"]
+script = ExtResource("1")
+speaker_name = "侦察员"
+dialogue_text = "前方有地雷和炮塔，小心推进。"

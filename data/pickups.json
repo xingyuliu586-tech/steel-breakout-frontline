@@ -1,0 +1,22 @@
+{
+  "health": {
+    "display_name": "Medkit",
+    "heal": 30
+  },
+  "ammo": {
+    "display_name": "弹药箱",
+    "reserve_ammo": 60
+  },
+  "grenade": {
+    "display_name": "Grenade",
+    "amount": 1
+  },
+  "armor": {
+    "display_name": "Armor",
+    "armor": 25
+  },
+  "coin": {
+    "display_name": "Coin",
+    "score": 10
+  }
+}

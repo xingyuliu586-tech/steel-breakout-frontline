@@ -1,0 +1,34 @@
+{
+  "name": "Forest Frontline",
+  "level_width": 5400,
+  "player_spawn": [92, 250],
+  "npc": [
+    {"type": "commanding_officer", "position": [178, 250]}
+  ],
+  "enemies": [
+    {"type": "rifleman", "position": [650, 250]},
+    {"type": "rifleman", "position": [910, 250]},
+    {"type": "grenadier", "position": [1840, 250]},
+    {"type": "rifleman", "position": [2040, 250]},
+    {"type": "rifleman", "position": [3820, 250]},
+    {"type": "rifleman", "position": [4100, 250]},
+    {"type": "rifleman", "position": [4380, 250]},
+    {"type": "grenadier", "position": [4740, 250]}
+  ],
+  "objects": [
+    {"type": "crate", "position": [1320, 264]},
+    {"type": "crate", "position": [1380, 264]},
+    {"type": "oil_barrel", "position": [1515, 258]},
+    {"type": "land_mine", "position": [2440, 280]},
+    {"type": "land_mine", "position": [2540, 280]},
+    {"type": "turret", "position": [3000, 278]},
+    {"type": "communication_tower", "position": [4550, 276]},
+    {"type": "extraction_point", "position": [5200, 250]}
+  ],
+  "pickups": [
+    {"type": "ammo", "position": [1080, 236]},
+    {"type": "health", "position": [1140, 236]},
+    {"type": "grenade", "position": [2230, 238]}
+  ]
+}
+

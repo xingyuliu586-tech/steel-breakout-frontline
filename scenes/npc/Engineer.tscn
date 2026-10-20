@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/npc/NPCBase.gd" id="1"]
+
+[node name="Engineer" type="Area2D"]
+script = ExtResource("1")
+speaker_name = "工程师"
+dialogue_text = "我会守住补给点。需要弹药就回到这里。"

@@ -1,0 +1,13 @@
+{
+  "level_01": {
+    "name": "Forest Frontline",
+    "states": {
+      "MISSION_START": "突破敌军前线",
+      "MISSION_DESTROY_TOWER": "摧毁敌方通信塔",
+      "MISSION_EXTRACT": "前往撤离点",
+      "MISSION_COMPLETE": "任务完成"
+    },
+    "briefing": "士兵，敌方通信塔正在呼叫增援。突破防线，摧毁它，然后前往撤离点。"
+  }
+}
+

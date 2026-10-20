@@ -1,0 +1,72 @@
+{
+  "enabled": ["pistol", "assault_rifle"],
+  "weapons": {
+    "pistol": {
+      "display_name": "手枪",
+      "damage": 18,
+      "fire_rate": 0.35,
+      "magazine_size": 12,
+      "reserve_ammo": 999,
+      "reload_time": 1.0,
+      "bullet_speed": 450,
+      "automatic": false,
+      "spread": 2
+    },
+    "assault_rifle": {
+      "display_name": "突击步枪",
+      "damage": 12,
+      "fire_rate": 0.11,
+      "magazine_size": 30,
+      "reserve_ammo": 120,
+      "reload_time": 1.4,
+      "bullet_speed": 560,
+      "automatic": true,
+      "spread": 5
+    },
+    "submachine_gun": {
+      "display_name": "Submachine Gun",
+      "damage": 9,
+      "fire_rate": 0.08,
+      "magazine_size": 35,
+      "reserve_ammo": 105,
+      "reload_time": 1.25,
+      "bullet_speed": 520,
+      "automatic": true,
+      "spread": 7
+    },
+    "shotgun": {
+      "display_name": "Shotgun",
+      "damage": 8,
+      "pellets": 6,
+      "fire_rate": 0.72,
+      "magazine_size": 6,
+      "reserve_ammo": 24,
+      "reload_time": 1.6,
+      "bullet_speed": 420,
+      "automatic": false,
+      "spread": 13
+    },
+    "sniper_rifle": {
+      "display_name": "Sniper Rifle",
+      "damage": 70,
+      "fire_rate": 1.1,
+      "magazine_size": 5,
+      "reserve_ammo": 15,
+      "reload_time": 1.9,
+      "bullet_speed": 760,
+      "automatic": false,
+      "spread": 0.5
+    },
+    "rocket_launcher": {
+      "display_name": "Rocket Launcher",
+      "damage": 110,
+      "fire_rate": 1.4,
+      "magazine_size": 1,
+      "reserve_ammo": 4,
+      "reload_time": 2.1,
+      "bullet_speed": 320,
+      "automatic": false,
+      "spread": 1
+    }
+  }
+}

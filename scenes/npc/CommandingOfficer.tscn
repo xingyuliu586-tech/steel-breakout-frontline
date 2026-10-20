@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/npc/NPCBase.gd" id="1"]
+
+[node name="CommandingOfficer" type="Area2D"]
+script = ExtResource("1")
+speaker_name = "指挥官"
+dialogue_text = "士兵，敌方通信塔正在呼叫增援。突破防线，摧毁它，然后前往撤离点。"

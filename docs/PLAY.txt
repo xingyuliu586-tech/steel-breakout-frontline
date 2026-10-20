@@ -1,0 +1,36 @@
+钢铁突围：前线行动
+Steel Breakout: Frontline Action
+v0.1.0 - Windows x64 开发试玩版
+
+运行：
+完整解压 ZIP，双击 SteelBreakout.exe。
+请勿分开 SteelBreakout.exe 与 SteelBreakout.pck。
+不需要安装 Godot。需要 Windows 10/11 64 位与支持 OpenGL 3.3 的显卡。
+
+操作：
+A/D 或左右方向键：移动
+空格/W/上方向键：跳跃
+S/下方向键：蹲下
+鼠标移动：瞄准
+鼠标左键/J：射击
+R：换弹
+G/K：投手雷
+1：手枪
+2：突击步枪
+3：手雷模式（射击键投掷）
+4：RPG，需要拾取
+5：霰弹枪，需要拾取
+6：狙击步枪，需要拾取
+E：交互
+Esc：暂停
+
+第一关：摧毁通信塔，到最右侧撤离。
+第二关：摧毁守门坦克，沿解锁的平台向上，摧毁指挥车后撤离。
+通关记录会自动保存，但不会保存即时位置。
+
+下载与反馈：
+https://github.com/xingyuliu586-tech/steel-breakout-frontline
+
+这是尚在开发的试玩版，部分美术与平衡仍待完善。
+文件未进行商业代码签名，请核实下载来源与校验值，不要关闭安全防护。
+第三方许可位于 licenses 文件夹；素材与权利说明见 ASSETS.md。
