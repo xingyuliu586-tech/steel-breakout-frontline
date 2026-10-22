@@ -85,6 +85,12 @@ godot --headless --path . res://tests/release_smoke.tscn
 
 自动化测试覆盖主菜单、两关加载、暂停、三处沙包平台的连续跳跃与下方通行、返回菜单。测试不等同于完整人工通关、全部武器组合或所有硬件的验证。
 
+## AI Vibe Coding Skill
+
+本项目的需求拆解、提示词写法、截图驱动修复、素材接入、回归验证和发布方法已经整理为可复用的 [Godot Vibe Game Dev Skill](skills/godot-vibe-game-dev/SKILL.md)。可直接参考其中的[中文提示词模板](skills/godot-vibe-game-dev/references/prompt-templates.md)，用于创建或迭代其他 Godot 2D 游戏。
+
+安装时将 `skills/godot-vibe-game-dev` 文件夹复制到 `$CODEX_HOME/skills/`（Windows 默认是 `~/.codex/skills/`），重新启动 Codex 后使用 `$godot-vibe-game-dev` 调用。
+
 ## 项目结构
 
 ```text

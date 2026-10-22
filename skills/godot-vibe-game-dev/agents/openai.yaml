@@ -1,0 +1,4 @@
+interface:
+  display_name: "Godot Vibe Game Dev"
+  short_description: "用 AI 协作方式开发、调试并发布 Godot 2D 游戏"
+  default_prompt: "使用 $godot-vibe-game-dev 帮我从需求拆解开始开发或迭代一个 Godot 2D 游戏。"
