@@ -19,6 +19,12 @@ func _check(condition: bool, message: String) -> void:
 		failures.append(message)
 		push_error(message)
 
+func _has_physical_key(action: StringName, key: Key) -> bool:
+	for event in InputMap.action_get_events(action):
+		if event is InputEventKey and event.physical_keycode == key:
+			return true
+	return false
+
 func _jump_to(player: CharacterBody2D, target_x: float, expected_y: float) -> void:
 	Input.action_press("jump")
 	Input.action_press("move_right")
@@ -40,6 +46,10 @@ func _run() -> void:
 	add_child(main)
 	await _frames(3)
 	_check(main.current_scene.has_signal("start_game"), "main menu loads")
+	_check(_has_physical_key("move_left", KEY_A), "A uses physical keyboard position")
+	_check(_has_physical_key("move_right", KEY_D), "D uses physical keyboard position")
+	_check(_has_physical_key("jump", KEY_W), "W uses physical keyboard position")
+	_check(_has_physical_key("crouch", KEY_S), "S uses physical keyboard position")
 	main.start_game()
 	await _frames(60)
 	var player: CharacterBody2D = main.current_scene.player

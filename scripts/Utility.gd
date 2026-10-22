@@ -2,20 +2,20 @@ class_name Utility
 extends RefCounted
 
 static func configure_input_actions() -> void:
-	_ensure_action("move_left", [_key(KEY_A), _key(KEY_LEFT)])
-	_ensure_action("move_right", [_key(KEY_D), _key(KEY_RIGHT)])
-	_ensure_action("jump", [_key(KEY_W), _key(KEY_SPACE), _key(KEY_UP)])
-	_ensure_action("crouch", [_key(KEY_S), _key(KEY_DOWN)])
-	_ensure_action("shoot", [_mouse(MOUSE_BUTTON_LEFT), _key(KEY_J)])
-	_ensure_action("reload", [_key(KEY_R)])
-	_ensure_action("throw_grenade", [_key(KEY_G), _key(KEY_K)])
-	_ensure_action("switch_weapon_1", [_key(KEY_1)])
-	_ensure_action("switch_weapon_2", [_key(KEY_2)])
-	_ensure_action("switch_weapon_3", [_key(KEY_3)])
-	_ensure_action("switch_weapon_4", [_key(KEY_4)])
-	_ensure_action("switch_weapon_5", [_key(KEY_5)])
-	_ensure_action("switch_weapon_6", [_key(KEY_6)])
-	_ensure_action("interact", [_key(KEY_E)])
+	_ensure_action("move_left", [_physical_key(KEY_A), _key(KEY_LEFT)])
+	_ensure_action("move_right", [_physical_key(KEY_D), _key(KEY_RIGHT)])
+	_ensure_action("jump", [_physical_key(KEY_W), _key(KEY_SPACE), _key(KEY_UP)])
+	_ensure_action("crouch", [_physical_key(KEY_S), _key(KEY_DOWN)])
+	_ensure_action("shoot", [_mouse(MOUSE_BUTTON_LEFT), _physical_key(KEY_J)])
+	_ensure_action("reload", [_physical_key(KEY_R)])
+	_ensure_action("throw_grenade", [_physical_key(KEY_G), _physical_key(KEY_K)])
+	_ensure_action("switch_weapon_1", [_physical_key(KEY_1)])
+	_ensure_action("switch_weapon_2", [_physical_key(KEY_2)])
+	_ensure_action("switch_weapon_3", [_physical_key(KEY_3)])
+	_ensure_action("switch_weapon_4", [_physical_key(KEY_4)])
+	_ensure_action("switch_weapon_5", [_physical_key(KEY_5)])
+	_ensure_action("switch_weapon_6", [_physical_key(KEY_6)])
+	_ensure_action("interact", [_physical_key(KEY_E)])
 	_ensure_action("pause", [_key(KEY_ESCAPE)])
 
 static func set_pixel_defaults(node: CanvasItem) -> void:
@@ -167,6 +167,11 @@ static func _ensure_action(action_name: StringName, events: Array) -> void:
 static func _key(keycode: Key) -> InputEventKey:
 	var event := InputEventKey.new()
 	event.keycode = keycode
+	return event
+
+static func _physical_key(keycode: Key) -> InputEventKey:
+	var event := InputEventKey.new()
+	event.physical_keycode = keycode
 	return event
 
 static func _mouse(button_index: MouseButton) -> InputEventMouseButton:
