@@ -29,6 +29,8 @@ Godot 4.6 · 像素横版射击 · 单人双关卡 · Windows x64
 
 目标平台是 Windows 10/11 64 位，键盘与鼠标操作，显卡需支持 OpenGL 3.3。当前使用兼容性渲染模式；尚未完成不同硬件上的兼容性测试。发布文件未进行商业代码签名，Windows 可能提示未知发布者，请先确认下载来源和 SHA-256 校验值，不要关闭系统安全防护。
 
+网页试玩版使用键盘和鼠标，需要支持 WebGL 2.0 的桌面浏览器；当前尚未适配手机触屏。
+
 ## 两条战线
 
 | 关卡 | 内容 |
@@ -82,6 +84,8 @@ powershell -ExecutionPolicy Bypass -File tools/build_windows.ps1 `
 ```text
 godot --headless --path . res://tests/release_smoke.tscn
 ```
+
+网页版本使用相同版本的 Web 导出模板，运行 `tools/build_web.ps1`，将 `-GodotExe` 指向本机 Godot 4.6.3 控制台程序。脚本会运行冒烟测试，导出 `build/web/index.html` 等网页文件，并在 `dist/` 生成可上传至 itch.io 的 ZIP。上传时选择 HTML Game，并将 ZIP 设为浏览器中运行。网页导出需要通过 HTTP(S) 服务器访问，直接双击 `index.html` 不会正常启动。
 
 自动化测试覆盖主菜单、两关加载、暂停、三处沙包平台的连续跳跃与下方通行、返回菜单。测试不等同于完整人工通关、全部武器组合或所有硬件的验证。
 

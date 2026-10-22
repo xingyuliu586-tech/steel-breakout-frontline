@@ -48,7 +48,7 @@ func _build_ui() -> void:
 
 	var panel := PanelContainer.new()
 	panel.position = Vector2(226, 142)
-	panel.custom_minimum_size = Vector2(190, 118)
+	panel.custom_minimum_size = Vector2(190, 44) if OS.has_feature("web") else Vector2(190, 118)
 	Utility.style_panel(panel)
 	root.add_child(panel)
 
@@ -58,7 +58,8 @@ func _build_ui() -> void:
 	_add_button(buttons, "开始游戏", func() -> void: start_game.emit())
 	if bool(SaveManager.data.get("level_01_completed", false)):
 		_add_button(buttons, "继续第二关", func() -> void: continue_game.emit())
-	_add_button(buttons, "退出", func() -> void: quit_requested.emit())
+	if not OS.has_feature("web"):
+		_add_button(buttons, "退出", func() -> void: quit_requested.emit())
 
 func _add_button(parent: VBoxContainer, text: String, callback: Callable) -> void:
 	var button := Button.new()
