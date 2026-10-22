@@ -7,7 +7,7 @@
 
 Godot 4.6 · 像素横版射击 · 单人双关卡 · Windows x64
 
-[下载 Windows 试玩版](https://github.com/xingyuliu586-tech/steel-breakout-frontline/releases/tag/v0.1.0) · [操作说明](#操作说明) · [开发与构建](#开发与构建) · [反馈问题](https://github.com/xingyuliu586-tech/steel-breakout-frontline/issues)
+[在线试玩](https://xingyuliu586-tech.github.io/steel-breakout-frontline/) · [下载 Windows 试玩版](https://github.com/xingyuliu586-tech/steel-breakout-frontline/releases/tag/v0.1.0) · [操作说明](#操作说明) · [开发与构建](#开发与构建) · [反馈问题](https://github.com/xingyuliu586-tech/steel-breakout-frontline/issues)
 
 ![钢铁突围主菜单](docs/images/menu.png)
 
@@ -29,7 +29,7 @@ Godot 4.6 · 像素横版射击 · 单人双关卡 · Windows x64
 
 目标平台是 Windows 10/11 64 位，键盘与鼠标操作，显卡需支持 OpenGL 3.3。当前使用兼容性渲染模式；尚未完成不同硬件上的兼容性测试。发布文件未进行商业代码签名，Windows 可能提示未知发布者，请先确认下载来源和 SHA-256 校验值，不要关闭系统安全防护。
 
-网页试玩版使用键盘和鼠标，需要支持 WebGL 2.0 的桌面浏览器；当前尚未适配手机触屏。
+也可以直接打开[网页试玩版](https://xingyuliu586-tech.github.io/steel-breakout-frontline/)，无需安装。首次打开需下载游戏资源，后续由浏览器缓存。网页试玩版使用键盘和鼠标，需要支持 WebGL 2.0 的桌面浏览器；当前尚未适配手机触屏。
 
 ## 两条战线
 
@@ -78,6 +78,15 @@ powershell -ExecutionPolicy Bypass -File tools/build_windows.ps1 `
 ```
 
 构建前需安装匹配 **4.6.3** 的导出模板。脚本执行资源导入、自动化冒烟测试、Windows Release 导出，并生成带操作说明、许可文件和 SHA-256 的 ZIP。产物在 `dist/`，不会提交到源码仓库。
+
+网页构建使用同版本 Web 导出模板，并采用单线程模式，不要求网页服务器提供跨域隔离标头。`tools/build_font_subset.py` 使用 Python `fonttools` 从游戏文本更新中文字体字形；新增界面文字后先运行它。然后执行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools/build_web.ps1 `
+  -GodotExe "C:\Tools\Godot\Godot_v4.6.3-stable_win64_console.exe"
+```
+
+网页文件生成在 `build/web/`，分享用 ZIP 在 `dist/`。将 `build/web/` 的内容放到静态网站根目录即可游玩；GitHub Pages 使用本仓库的 `gh-pages` 分支。
 
 也可以单独运行测试：
 

@@ -41,7 +41,7 @@ window/stretch/aspect="expand"
 
 [gui]
 
-theme/custom_font="res://assets/fonts/NotoSansSC.ttf"
+theme/custom_font="res://assets/fonts/NotoSansSC-game.ttf"
 
 [rendering]
 
